@@ -1,0 +1,24 @@
+{
+  "name": "node-typescript-template",
+  "version": "0.0.1",
+  "description": "Template for typescript node",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvsystem/cache-template.git"
+  },
+  "author": "Lucas Rego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fvsystem/node-typescript-template/issues"
+  },
+  "homepage": "https://github.com/fvsystem/node-typescript-template#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
