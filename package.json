@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "commit": "cz"
+    "commit": "cz",
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "eslint-plugin-prettier": "latest",
     "husky": "latest",
     "jest": "latest",
+    "nodemon": "latest",
     "prettier": "latest",
     "ts-jest": "latest",
     "ts-node": "latest",

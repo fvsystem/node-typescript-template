@@ -102,5 +102,6 @@
     "jest-setup-file.ts",
     "__tests__/*",
     "__mocks__/*",
+    "commitlint.config.js"
   ]
 }
