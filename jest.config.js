@@ -2,6 +2,9 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  transform: {
+    '^.+\\.ts?$': ['@swc/jest'],
+  },
   clearMocks: true,
   globals: {
     'ts-jest': {
@@ -15,10 +18,10 @@ module.exports = {
   collectCoverage: true,
   coverageThreshold: {
     global: {
-      branches: 100,
-      functions: 100,
+      branches: 80,
+      functions: 80,
       lines: 80,
-      statements: 100,
+      statements: 80,
     },
   },
 };
