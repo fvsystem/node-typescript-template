@@ -1,13 +1,10 @@
 version: '3.8'
 
-
 services:
   node:
     build:
       context: .
-      dockerfile: Dockerfile.dev  
+      dockerfile: Dockerfile.dev
     volumes:
-        - ./:/app
-        - /app/node_modules
-      
-      
+      - ./:/home/node/app
+      - /app/node_modules

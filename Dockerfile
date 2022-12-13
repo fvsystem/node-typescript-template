@@ -1,6 +1,6 @@
-FROM node:16-alpine AS builder
+FROM node:lts-alpine AS builder
 
-WORKDIR /app
+WORKDIR /home/node/app
 
 COPY package* .
 
@@ -11,9 +11,9 @@ COPY . .
 RUN npm run build
 
 
-FROM node:16-alpine
+FROM node:lts-alpine
 
-WORKDIR /app
+WORKDIR /home/node/app
 
 ENV NODE_ENV=production
 
