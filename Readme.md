@@ -17,13 +17,9 @@ To use this template, press the "Use Template" button on first page of this repo
 If you have docker installed on your machine, you can run the development environment by executing the following command:
 
 ```
-docker compose up --build
-```
+docker compose up --build -d
 
-If you add some new module to node_modules you will need to execute the command below in order to update the anonymous volume attached to node_modules inside of docker container:
-
-```
-docker compose down
+docker-compose exec node bash
 ```
 
 This docker configuration is not ready to expose ports, please, check docker documentation in case you need to expose ports.
