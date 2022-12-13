@@ -24,6 +24,12 @@ docker-compose exec node bash
 
 This docker configuration is not ready to expose ports, please, check docker documentation in case you need to expose ports.
 
+### VSCODE AND REMOTE DEVELOPMENT
+
+You can use the [Remote Development Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) from VSCode. You have to Run Command 'Dev Containers: Rebuild Container and Attach to Container' in VSCode command Pallet
+
+With this environment, you will be inside the container configured, but you will also have access to your ssh keys and gpg keys in order to use git and remote repositories.
+
 <p align="center">
 
 ### COMMITING
