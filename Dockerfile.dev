@@ -10,12 +10,21 @@ RUN mkdir -p /usr/share/man/man1 && \
     curl \
     wget \
     fonts-powerline \
-    procps
+    procps \
+    sudo
+
+RUN mkdir -p /etc/sudoers.d \
+    && echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node \
+    && chmod 0440 /etc/sudoers.d/node
 
 
 ENV JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
+
 USER node
+
+RUN sudo apt install gnupg2 -y
+
 
 WORKDIR /home/node/app
 
@@ -34,5 +43,11 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 
 RUN echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> ~/.zshrc && \
     echo 'HISTFILE=/home/node/zsh/.zsh_history' >> ~/.zshrc 
+
+USER root
+
+RUN rm /etc/sudoers.d/node
+
+USER node
 
 CMD [ "tail", "-f" , "/dev/null" ]
